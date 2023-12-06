@@ -79,3 +79,21 @@ class Rectangle2:
     def height(self, h):
         self.__height = h
 
+###4. Test NO SETTER Property Decorator ---------------------------------------------
+class Effect:
+    def __init__(self, text: str, mag: int):
+        self.mag = mag
+        self.__text = text
+    @property
+    def mag(self):
+        return self.__mag
+    @mag.setter
+    def mag(self, val):
+        self.__mag = val
+    @property
+    def text(self):
+        return self.__text
+
+    def __str__(self):
+        return str(self)
+
